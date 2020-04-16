@@ -3,11 +3,25 @@ from discord.ext import commands
 
 class actioncommand(commands.Cog):
     
-    def __init__(self):
-        pass
+    def __init__(self,bot):
+        self.bot = bot
         
     
     @commands.command()
-    async def hello(ctx):
-        await ctx.send('hello')
+    async def notice(self,ctx,*,content=None):
+        if ctx.author.id == 598018755066593290:
+            if content is not None:
+                for g in self.bot.guilds:
+                    if g.system_channel is None:
+                        await g.owner.send(content)
+                    if g.system_channel is not None:
+                        await g.system_channel.send(content)
+            if content is None:
+                await ctx.send('argument is not designneire')
+        else:
+            await ctx.send('You have not adminstar')
+            
+                
+                    
+                        
     
