@@ -23,7 +23,10 @@ async def on_ready():
 async def code(ctx):
     await ctx.send('pls check this URL')
     await ctx.send('https://github.com/Ameminn-python/voteapp')
-
+    
+@bot.command()
+async def invite(ctx):
+    await ctx.send('https://discordapp.com/api/oauth2/authorize?client_id=686677905115578403&permissions=8&scope=bot')
 
 helpcommands = helpcommands()
 bot.add_cog(qa(bot))
