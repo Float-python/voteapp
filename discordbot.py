@@ -3,7 +3,7 @@ import os
 import traceback
 from Votecog import qa
 from HelpCog import helpcommands
-bot = commands.Bot(command_prefix='*')
+bot = commands.Bot(command_prefix='*',help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
