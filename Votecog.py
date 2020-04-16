@@ -82,7 +82,7 @@ class qa(commands.Cog):
             f_re_msg = await self.asr_channel[ctx.guild.id].fetch_message(self.reaction_message[ctx.guild.id].id)
             result_e = discord.Embed(title='Result form',description=(f_re_msg.jump_url),colour=discord.Colour.magenta())
             for reaction in f_re_msg.reactions:
-                result_e.add_field(name=str(reaction.emoji),value='The number of times this reaction was done'+str(reaction.count))
+                result_e.add_field(name=str(reaction.emoji),value='The number of times this reaction was done'+str((reaction.count)-1))
             await ctx.send(embed=result_e)
             self.do_q[ctx.guild.id] = False
             self.Question[ctx.guild.id] = None
