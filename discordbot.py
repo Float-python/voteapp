@@ -2,7 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 from Votecog import qa
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='*')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -13,9 +13,12 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+@bot.event
+async def on_ready():
+    print('login')
+
+
+bot.add_cog(qa(bot))
 
 
 bot.run(token)
