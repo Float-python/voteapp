@@ -8,7 +8,7 @@ class helpcommands(commands.Cog):
     @commands.command()
     async def help(self,ctx,feature=None):
         if feature is None:
-            help_feature = discord.Embed(title='Help commands help :D',description='*help <**feature**>,colour=discord.Colour.orange())
+            help_feature = discord.Embed(title='Help commands help :D',description='*help <**feature**>',colour=discord.Colour.orange())
             help_feature.add_field(name='**vote**',value='Vote feature help use this *help vote',inline=False)
             await ctx.send(embed=help_feature)
         elif feature == 'vote':
