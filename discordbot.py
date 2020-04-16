@@ -22,12 +22,14 @@ async def on_ready():
     
 @bot.command()
 async def code(ctx):
-    await ctx.send('pls check this URL')
-    await ctx.send('https://github.com/Ameminn-python/voteapp')
-    
+    code_embed = discord.Embed(title='Sorce code',description='suit:github  language:python',colour=discord.Colour.purple())
+    code_embed.add_field(name='Code',value=['ameminn code']('https://github.com/Ameminn-python/voteapp'),inline=False
+    await ctx.send(embed=code_embed)
 @bot.command()
 async def invite(ctx):
-    await ctx.send('https://discordapp.com/api/oauth2/authorize?client_id=686677905115578403&permissions=8&scope=bot')
+    invite_embed = discord.Embed(title='Invite URL',description='this bot invite url',colour=discord.Colour.purple())
+    invite_embed.add_field(name='Invite',value=['Invite Form']('https://github.com/Ameminn-python/voteapp'),inline=False)
+    await ctx.send(embed=invite_embed)     
 
 helpcommands = helpcommands()
 bot.add_cog(qa(bot))
