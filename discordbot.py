@@ -26,7 +26,7 @@ async def code():
 
 
 bot.add_cog(qa(bot))
-bot.add_cod(helpcommands)
+bot.add_cog(helpcommands)
 
 
 bot.run(token)
