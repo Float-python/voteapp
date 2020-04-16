@@ -39,7 +39,7 @@ class qa(commands.Cog):
         print(self.Question)
         if subject is None:
             await ctx.send('The *vote is used incorrectly pls check help command(*help <feature>) ')
-        if subject is not None
+        if subject is not None:
             if ctx.guild.id in self.Question:
                 if self.Question[ctx.guild.id] is None:
                     self.adm[ctx.guild.id] = ctx.author
