@@ -25,6 +25,7 @@ async def code():
     await ctx.send('https://github.com/Ameminn-python/voteapp')
 
 
+helpcommands = helpcommands()
 bot.add_cog(qa(bot))
 bot.add_cog(helpcommands)
 
