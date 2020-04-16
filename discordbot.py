@@ -18,6 +18,11 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     print('login')
+    
+@bot.command()
+async def code():
+    await ctx.send('pls check this URL')
+    await ctx.send('https://github.com/Ameminn-python/voteapp')
 
 
 bot.add_cog(qa(bot))
