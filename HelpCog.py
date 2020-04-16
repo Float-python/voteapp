@@ -20,7 +20,7 @@ class helpcommands(commands.Cog):
             await ctx.send(embed=help_vote)
         elif feature == 'general':
             help_general = discord.Embed(title='General Help',description='this bot general command',colour=discord.Colour.orange())
-            help_general.add_field(name='*code*'value='if you use this command, you can get source code',inline=False)
+            help_general.add_field(name='*code*',value='if you use this command, you can get source code',inline=False)
             help_general.add_field(name='*invite*',value='return this bot invite URL',inline=False)
             await ctx.send(embed=help_general)
         else:
