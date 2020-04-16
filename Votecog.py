@@ -39,15 +39,16 @@ class qa(commands.Cog):
         print(self.Question)
         if subject is None:
             await ctx.send('The vote is used incorrectly')
-        if ctx.guild.id in self.Question:
-            if self.Question[ctx.guild.id] is None:
-                self.adm[ctx.guild.id] = ctx.author
-                self.Question[ctx.guild.id] = subject
-                await ctx.send('Answer pls startswith *asr answer1/answer2/an...(Max:4)')
+        if subject is not None
+            if ctx.guild.id in self.Question:
+                if self.Question[ctx.guild.id] is None:
+                    self.adm[ctx.guild.id] = ctx.author
+                    self.Question[ctx.guild.id] = subject
+                    await ctx.send('Answer pls startswith *asr answer1/answer2/an...(Max:4)')
+                else:
+                    await ctx.send('You have any question in guild')
             else:
-                await ctx.send('You have any question in guild')
-        else:
-            await ctx.send('dict Error(Vote): pls feedback to ameminn')
+                await ctx.send('dict Error(Vote): pls feedback to ameminn')
         
     @commands.command()
     async def asr(self,ctx,a):
