@@ -29,7 +29,7 @@ async def code(ctx):
 @bot.command()
 async def invite(ctx):
     invite_embed = discord.Embed(title='Invite URL',description='this bot invite url',colour=discord.Colour.purple())
-    invite_embed.add_field(name='Invite',value='[Invite Form](https://github.com/Ameminn-python/voteapp)',inline=False)
+    invite_embed.add_field(name='Invite',value='[Invite Form](https://discordapp.com/api/oauth2/authorize?client_id=686677905115578403&permissions=8&scope=bot)',inline=False)
     await ctx.send(embed=invite_embed)     
 
 helpcommands = helpcommands()
