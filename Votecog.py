@@ -38,7 +38,7 @@ class qa(commands.Cog):
         print(ctx.guild.id)
         print(self.Question)
         if subject is None:
-            await ctx.send('The vote is used incorrectly')
+            await ctx.send('The *vote is used incorrectly')
         if subject is not None
             if ctx.guild.id in self.Question:
                 if self.Question[ctx.guild.id] is None:
@@ -52,7 +52,9 @@ class qa(commands.Cog):
         
     @commands.command()
     async def asr(self,ctx,a):
-        if ctx.guild.id in self.Question:
+        if a is None:
+            await ctx.send('The *asr is used incorrectly')
+        if ctx.guild.id in self.Question and a is not None:
             if self.Question[ctx.guild.id] is not None:
                 self.asr_channel[ctx.guild.id] = ctx.channel
                 answer= a
