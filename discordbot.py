@@ -28,11 +28,11 @@ async def code(ctx):
 @bot.command()
 async def invite(ctx):
     await ctx.send('https://discordapp.com/api/oauth2/authorize?client_id=686677905115578403&permissions=8&scope=bot')
-action = actioncommand()
+
 helpcommands = helpcommands()
 bot.add_cog(qa(bot))
 bot.add_cog(helpcommands)
-bot.add_cog(action)
+bot.add_cog(actioncommand(bot))
 
 
 bot.run(token)
