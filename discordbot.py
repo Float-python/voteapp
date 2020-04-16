@@ -24,12 +24,12 @@ async def on_ready():
 @bot.command()
 async def code(ctx):
     code_embed = discord.Embed(title='Sorce code',description='suit:github  language:python',colour=discord.Colour.purple())
-    code_embed.add_field(name='Code',value=['ameminn code']('https://github.com/Ameminn-python/voteapp'),inline=False)
+    code_embed.add_field(name='Code',value='[ameminn code](https://github.com/Ameminn-python/voteapp)',inline=False)
     await ctx.send(embed=code_embed)
 @bot.command()
 async def invite(ctx):
     invite_embed = discord.Embed(title='Invite URL',description='this bot invite url',colour=discord.Colour.purple())
-    invite_embed.add_field(name='Invite',value=['Invite Form']('https://github.com/Ameminn-python/voteapp'),inline=False)
+    invite_embed.add_field(name='Invite',value='[Invite Form](https://github.com/Ameminn-python/voteapp)',inline=False)
     await ctx.send(embed=invite_embed)     
 
 helpcommands = helpcommands()
