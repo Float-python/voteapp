@@ -20,7 +20,7 @@ async def on_ready():
     print('login')
     
 @bot.command()
-async def code():
+async def code(ctx):
     await ctx.send('pls check this URL')
     await ctx.send('https://github.com/Ameminn-python/voteapp')
 
