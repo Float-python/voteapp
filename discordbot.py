@@ -2,6 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 from Votecog import qa
+from ActionCog import actioncommand
 from HelpCog import helpcommands
 bot = commands.Bot(command_prefix='*',help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
