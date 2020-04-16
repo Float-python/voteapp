@@ -2,8 +2,10 @@ from discord.ext import commands
 import os
 import traceback
 from Votecog import qa
+from HelpCog import helpcommands
 bot = commands.Bot(command_prefix='*')
 token = os.environ['DISCORD_BOT_TOKEN']
+
 
 
 @bot.event
@@ -19,6 +21,7 @@ async def on_ready():
 
 
 bot.add_cog(qa(bot))
+bot.add_cod(helpcommands)
 
 
 bot.run(token)
