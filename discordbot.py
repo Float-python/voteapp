@@ -1,4 +1,5 @@
 from discord.ext import commands
+
 import os
 import traceback
 from Votecog import qa
