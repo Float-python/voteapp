@@ -27,7 +27,7 @@ class admin(commands.Cog):
             lisence_embed.add_field(name='だから...',value='最初はつらいし、修理されるときも痛いし寂しいよ...だがわしは`あめみん`を親として尊敬してる')
             
             feature_embed = discord.Embed(title='わしの脳内マップ',description='まだひよっこだけどね🐤',color=discord.Colour.gold())
-            feature_embed.add_field(naem='投票機能',value='わしは頭がいいから集計なんかができるぞ詳しくは`*help vote`をしたら口から説明を吐き出すからな')
+            feature_embed.add_field(name='投票機能',value='わしは頭がいいから集計なんかができるぞ詳しくは`*help vote`をしたら口から説明を吐き出すからな')
             
             await welcome_ch.send(embed=welcome_embed)
             await license_ch.send(embed=lisence_embed)
