@@ -111,6 +111,6 @@ class qa(commands.Cog):
                     else:
                         g = self.bot.get_guild(server.id)
                         ch = g.get_channel(700609514931748894)
-                            await ch.send('そろそろダウンタイムが始まります！')
+                        await ch.send('そろそろダウンタイムが始まります！')
                             
     
