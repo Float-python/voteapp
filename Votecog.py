@@ -102,9 +102,15 @@ class qa(commands.Cog):
     async def update(self,ctx):
         if ctx.author.id == 598018755066593290:
             for server in self.bot.guilds:
-                if server.system_channel is None:
-                    await server.owner.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
-                if server.system_channel is not None:
-                    await server.system_channel.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
-                    
+                if server.id != 696446597105713362:
+                    if server.id != 700603441302732873
+                        if server.system_channel is None:
+                            await server.owner.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
+                        if server.system_channel is not None:
+                            await server.system_channel.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
+                    else:
+                        g = self.bot.get_guild(server.id):
+                        ch = g.get_channel(700609514931748894):
+                            await ch.send('そろそろダウンタイムが始まります！')
+                            
     
