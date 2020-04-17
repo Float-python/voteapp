@@ -46,7 +46,7 @@ class qa(commands.Cog):
                 self.Question[ctx.guild.id] = subject
                 await ctx.send('わしは頭がいいから質問を覚えたぞ！ノリで答えを4つまで覚えてやる*asr 答え①/答え② って感じで教えてくれ')
             else:
-                await ctx.send('吾輩は頭が悪いからな')
+                await ctx.send('吾輩は頭が悪いからな一個しか覚えられんｗすまんのぉ...')
         else:
             await ctx.send('う、うわぁ体が...変になっちゃった...公式サーバーでこれを教えてね(votr:dictError)')
         
