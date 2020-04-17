@@ -39,16 +39,16 @@ class qa(commands.Cog):
         print(self.Question)
         if subject is None:
             await ctx.send('The *vote is used incorrectly pls check help command(*help <feature>) ')
-        if subject is not None:
-            if ctx.guild.id in self.Question:
-                if self.Question[ctx.guild.id] is None:
-                    self.adm[ctx.guild.id] = ctx.author
-                    self.Question[ctx.guild.id] = subject
-                    await ctx.send('Answer pls startswith *asr answer1/answer2/an...(Max:4)')
-                else:
-                    await ctx.send('You have any question in guild')
+            return a
+        if ctx.guild.id in self.Question:
+            if self.Question[ctx.guild.id] is None:
+                self.adm[ctx.guild.id] = ctx.author
+                self.Question[ctx.guild.id] = subject
+                await ctx.send('Answer pls startswith *asr answer1/answer2/an...(Max:4)')
             else:
-                await ctx.send('dict Error(Vote): pls feedback to ameminn')
+                await ctx.send('You have any question in guild')
+        else:
+            await ctx.send('dict Error(Vote): pls feedback to ameminn')
         
     @commands.command()
     async def asr(self,ctx,a):
@@ -97,13 +97,9 @@ class qa(commands.Cog):
             self.Question[ctx.guild.id] = None
 
     @commands.command()
-    async def state(self,ctx):
+    async def state(self,ctx,page):
         if ctx.author.id == 598018755066593290:
-            await ctx.send(self.adm)
-            await ctx.send(self.asr_channel)
-            await ctx.send(self.Question)
-            await ctx.send(self.reaction_message)
-            await ctx.send(self.do_q)
+            
 
     @commands.command()
     async def update(self,ctx):
