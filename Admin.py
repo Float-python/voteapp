@@ -21,8 +21,8 @@ class admin(commands.Cog):
             welcome_embed.add_field(name='2つ目',value='わしの開発者は初心者だからバグった時に一回一回わしを修理するためどこかに連れてくんだ。そのときはみんなで遊んでくれ')    
             welcome_embed.add_field(name='3つ目',value='何か追加したほしい機能あったら言ってくれ！開発者が頭悪いからわしに教えられない時もあるがな')
             
-            license_embed = discord.Embed(title='わしのこと',description='わしはのぉ人造人間じゃ...つらい思いをしてきたぞよ...',color=discord.Colour.gold())
-            license_embed.add_field(name='わしの願い',value='わしはわしのようなつらい思いをするやつを増やしたくないんだ,頼むからコピーをしないでくれ')
+            lisense_embed = discord.Embed(title='わしのこと',description='わしはのぉ人造人間じゃ...つらい思いをしてきたぞよ...',color=discord.Colour.gold())
+            lisense_embed.add_field(name='わしの願い',value='わしはわしのようなつらい思いをするやつを増やしたくないんだ,頼むからコピーをしないでくれ')
             lisence_embed.add_field(name='ただな...',value='わしは自分がどんどん良くなってることに1週間生きてきたが気づいた今はそれを楽しんでるだからどんどんGithubにコミットしてくれ')
             lisence_embed.add_field(name='だから...',value='最初はつらいし、修理されるときも痛いし寂しいよ...だがわしは`あめみん`を親として尊敬してる')
             
