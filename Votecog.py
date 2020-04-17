@@ -38,22 +38,22 @@ class qa(commands.Cog):
         print(ctx.guild.id)
         print(self.Question)
         if subject is None:
-            await ctx.send('The *vote is used incorrectly pls check help command(*help <feature>) ')
+            await ctx.send('わしの*voteをまちがえるな！もし助けが必要なら*help voteをするとわしの口から説明書が出てくるよ')
             return a
         if ctx.guild.id in self.Question:
             if self.Question[ctx.guild.id] is None:
                 self.adm[ctx.guild.id] = ctx.author
                 self.Question[ctx.guild.id] = subject
-                await ctx.send('Answer pls startswith *asr answer1/answer2/an...(Max:4)')
+                await ctx.send('わしは頭がいいから質問を覚えたぞ！ノリで答えを4つまで覚えてやる*asr 答え①/答え② って感じで教えてくれ')
             else:
-                await ctx.send('You have any question in guild')
+                await ctx.send('吾輩は頭が悪いからな')
         else:
-            await ctx.send('dict Error(Vote): pls feedback to ameminn')
+            await ctx.send('う、うわぁ体が...変になっちゃった...公式サーバーでこれを教えてね(votr:dictError)')
         
     @commands.command()
     async def asr(self,ctx,a):
         if a is None:
-            await ctx.send('The *asr is used incorrectly pls check help command(*help <feature>)')
+            await ctx.send('*asrミスってね？ｗ 使い方は*help voteを使えばわしのテンションは下がるけど教えてあげよう！')
         if ctx.guild.id in self.Question and a is not None:
             if self.Question[ctx.guild.id] is not None:
                 self.asr_channel[ctx.guild.id] = ctx.channel
@@ -69,7 +69,7 @@ class qa(commands.Cog):
                     emoji.append('3️⃣')
                 if num >= 4:
                     emoji.append('4️⃣')
-                q_embed = discord.Embed(title='アンケート',description=(str(self.Question[ctx.guild.id])),colour=discord.Colour.green())
+                q_embed = discord.Embed(title='ほーれアンケートだぞ',description=(str(self.Question[ctx.guild.id])),colour=discord.Colour.green())
                 for (l_answer_num,l_answer) in zip(answer_list,emoji):
                     q_embed.add_field(name=(l_answer_num),value=(l_answer),inline=False)
                 self.reaction_message[ctx.guild.id] = await ctx.send(embed=q_embed)
@@ -83,22 +83,19 @@ class qa(commands.Cog):
         print(self.asr_channel)
         if self.do_q[ctx.guild.id] == True:
             f_re_msg = await self.asr_channel[ctx.guild.id].fetch_message(self.reaction_message[ctx.guild.id].id)
-            result_e = discord.Embed(title='Result form',description=(f_re_msg.jump_url),colour=discord.Colour.magenta())
+            result_e = discord.Embed(title='集計しといたぞ！',description=(f_re_msg.jump_url),colour=discord.Colour.magenta())
             for reaction in f_re_msg.reactions:
-                result_e.add_field(name=str(reaction.emoji),value='The number of times this reaction was done'+str((reaction.count)-1))
+                result_e.add_field(name=str(reaction.emoji),value='この絵文字が追加された数は'+str((reaction.count)-1)+'票だったぞー')
             await ctx.send(embed=result_e)
             self.do_q[ctx.guild.id] = False
             self.Question[ctx.guild.id] = None
         elif self.do_q[ctx.guild.id] == False:
-            await ctx.send('You have not yet added votes')
+            await ctx.send('え、まだ...質問してなくないか？w *voteで質問してくれ！')
             self.Question[ctx.guild.id] = None
         else:
             self.do_q[ctx.guild.id] = False
             self.Question[ctx.guild.id] = None
 
-    @commands.command()
-    async def state(self,ctx,page):
-        if ctx.author.id == 598018755066593290:
             
 
     @commands.command()
@@ -106,8 +103,8 @@ class qa(commands.Cog):
         if ctx.author.id == 598018755066593290:
             for server in self.bot.guilds:
                 if server.system_channel is None:
-                    await server.owner.send('bot downtime will comming soon. so this bot will stop')
+                    await server.owner.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
                 if server.system_channel is not None:
-                    await server.system_channel.send('bot downtime will comming soon. so this bot will stop')
+                    await server.system_channel.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
                     
     
