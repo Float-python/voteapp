@@ -105,9 +105,15 @@ class qa(commands.Cog):
                 if server.id != 696446597105713362:
                     if server.id != 700603441302732873:
                         if server.system_channel is None:
-                            await server.owner.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
+                            try:
+                                await server.owner.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
+                            except discord.errors.Forbidden:
+                                pass
                         if server.system_channel is not None:
-                            await server.system_channel.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
+                            try:
+                                await server.owner.send('なんかあめみんさんがわしを修理するっつって束縛してるんだもうすぐ消えるかも')
+                            except discord.errors.Forbidden:
+                                pass
                     else:
                         g = self.bot.get_guild(server.id)
                         ch = g.get_channel(700609514931748894)
