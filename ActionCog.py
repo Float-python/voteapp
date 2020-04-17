@@ -13,9 +13,15 @@ class actioncommand(commands.Cog):
             if content is not None:
                 for g in self.bot.guilds:
                     if g.system_channel is None:
-                        await g.owner.send(content)
+                        try:
+                            await g.owner.send(content)
+                        except discord.errors.Forbidden:
+                            pass
                     if g.system_channel is not None:
-                        await g.system_channel.send(content)
+                        try:
+                            await g.system_channel.send(content)
+                        except discord.errors.Forbidden:
+                            pass
             if content is None:
                 await ctx.send('argument is not designneire')
         else:
