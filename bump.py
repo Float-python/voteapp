@@ -37,7 +37,7 @@ class Bump(commands.Cog):
                 await message.channel.send('わしはbumpを確認したぞ！')
                 for time in range(120,0,-1):
                     self.bump_time[message.guild.id] = time
-                    asyncio.sleep(60)
+                    await asyncio.sleep(60)
                     if self.bump_time[message.guild.id] == 5:
                         await message.channel.send('わしの腹時計があと5分！って言っとるぞ')
                     if self.bump_time[message.guild.id] == 0:
