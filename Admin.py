@@ -30,9 +30,9 @@ class admin(commands.Cog):
         feature_embed.add_field(name='投票機能',value='わしは頭がいいから集計なんかができるぞ詳しくは`*help vote`をしたら口から説明を吐き出すからな')
         
         if ctx.author.id == 598018755066593290:
-            await self.welcome_ch.send(embed=self.welcome_embed)
-            await self.license_ch.send(embed=self.lisence_embed)
-            await self.feature_ch.send(embed=self.feature_embed)
+            await welcome_ch.send(embed=self.welcome_embed)
+            await license_ch.send(embed=self.lisence_embed)
+            await feature_ch.send(embed=self.feature_embed)
             
     @commands.Cog.listener()
     async def on_guild_join(self,guild):
@@ -49,9 +49,9 @@ class admin(commands.Cog):
         feature_embed = discord.Embed(title='わしの脳内マップ',description='まだひよっこだけどね🐤',color=discord.Colour.gold())
         feature_embed.add_field(name='投票機能',value='わしは頭がいいから集計なんかができるぞ詳しくは`*help vote`をしたら口から説明を吐き出すからな')
         
-        await guild.owner.send(embed=self.welcome_embed)
-        await guild.owner.send(embed=self.lisence_embed)
-        await guild.owner.send(embed=self.feature_embed)
+        await guild.owner.send(embed=welcome_embed)
+        await guild.owner.send(embed=lisence_embed)
+        await guild.owner.send(embed=feature_embed)
         
         official_server = self.bot.get_guild(700603441302732873)
         new_guild_ch = official_server.get_channel(700638827672502293)
@@ -59,6 +59,6 @@ class admin(commands.Cog):
         
         join_embed = discord.Embed(title='参加通知',description=str(len(self.bot.guilds))+'was play',color=discord.Colour.black())
         join_embed.add_field(name=guild.name,value=str(guild.id))
-        await self.new_guild_ch.send(embed=join_embed)
+        await new_guild_ch.send(embed=join_embed)
         
         
