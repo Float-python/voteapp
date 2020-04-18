@@ -17,7 +17,7 @@ class Bump(commands.Cog):
             self.bump_time[g.id] = None
             b_dict.add_field(name='**辞書サーバー概要**',value=str(g.name)+'\n'+str(g.id))
             b_dict.add_field(name='value',value=str(bump_time[g.id]))
-            await staff_state_ch.send(embed=d_dict)
+            await staff_state_ch.send(embed=b_dict)
         
         
     @commands.Cog.listener()
