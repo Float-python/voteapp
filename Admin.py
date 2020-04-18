@@ -6,10 +6,10 @@ class admin(commands.Cog):
     def __init__ (self,bot):
         self.bot = bot
         self.official_server = self.bot.get_guild(700603441302732873)
-        self.welcome_ch = official_server.get_channel(700605961861070919)
-        self.license_ch = official_server.get_channel(700606877263855636)
-        self.feature_ch = official_server.get_channel(700606161858199562)
-        self.new_guild_ch = official_server.get_channel(700638827672502293)
+        self.welcome_ch = self.official_server.get_channel(700605961861070919)
+        self.license_ch = self.official_server.get_channel(700606877263855636)
+        self.feature_ch = self.official_server.get_channel(700606161858199562)
+        self.new_guild_ch = self.official_server.get_channel(700638827672502293)
         
         self.welcome_embed = discord.Embed(title='あめみんbot!の導入ありがとう！',description='楽しく使う上でお願いがあるよ',color=discord.Colour.gold())
         self.welcome_embed.add_field(name='1つ目',value='`*vote`を使って他人を傷つけることを言わないこと')
