@@ -31,7 +31,14 @@ class Bump(commands.Cog):
         await staff_state_ch.send(embed=join_bump_dict)
                                  
     @commands.Cog.listener()
-    
+    async def on_message(self,message):
+        if message.author.id == 302050872383242240:
+            if '表示順をアップしたよ' in message.embeds[0].description:
+                await message.channel.send('bumpを確認したよ！')
+                for time in range(120,0,-1):
+                    self.bump_time[message.guild.id] = time
+                    asyncio.sleep(60)
+                                 
          
             
             
