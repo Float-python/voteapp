@@ -5,6 +5,11 @@ class admin(commands.Cog):
     
     def __init__ (self,bot):
         self.bot = bot
+        official_server = self.bot.get_guild(700603441302732873)
+        welcome_ch = official_server.get_channel(700605961861070919)
+        license_ch = official_server.get_channel(700606877263855636)
+        feature_ch = official_server.get_channel(700606161858199562)
+        new_guild_ch = official_server.get_channel(700638827672502293)
         
     #official server setup
     @commands.command()
