@@ -13,9 +13,16 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.event
 async def on_command_error(ctx, error):
+    official_server = bot.get_guild(700603441302732873)
+    error_ch = official_server.get_channnel(700638984425963560)
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
+    error_embed = discord.Embed(title='エラーが発生しました',description=str(ctx.guild.id),color=discord.Colour.red())
+    error_embed.add_field(name='エラー原因参考',value='```1.引数を指定してない\n2.botに権限がない\n3.使い方が間違っている```\n上記で解決しない場合公式サーバーまでスクショをお願いします',inline=False)
+    error_embed.add_field(name='Traceback',value=error_msg,inline=False)
+    await ctx.send(embed=error_embed)
+    await error_ch.send(embed=error_embed)
 
 
 @bot.event
