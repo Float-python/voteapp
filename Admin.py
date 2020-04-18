@@ -57,7 +57,7 @@ class admin(commands.Cog):
         new_guild_ch = official_server.get_channel(700638827672502293)
         
         
-        join_embed = discord.Embed(title='参加通知',description=str(len(self.bot.guilds))+'was play',color=discord.Colour.())
+        join_embed = discord.Embed(title='参加通知',description=str(len(self.bot.guilds))+'was play',color=discord.Colour.green())
         join_embed.add_field(name=guild.name,value=str(guild.id))
         await new_guild_ch.send(embed=join_embed)
         
