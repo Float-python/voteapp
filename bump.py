@@ -12,7 +12,7 @@ class Bump(commands.Cog):
     async def on_ready(self):
         official_server = self.bot.get_guild(700603441302732873)
         staff_state_ch = official_server.get_channel(700974856379826237)
-        b_dict = dscord.Embed(title='botが再起動しました!',description='Bumpに関する辞書です',colour=discord.Colour.blue())
+        b_dict = discord.Embed(title='botが再起動しました!',description='Bumpに関する辞書です',colour=discord.Colour.blue())
         for g in self.bot.guilds:
             self.bump_time[g.id] = None
             b_dict.add_field(name='**辞書サーバー概要**',value=str(g.name)+'\n'+str(g.id))
