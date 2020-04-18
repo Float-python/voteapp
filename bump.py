@@ -34,11 +34,18 @@ class Bump(commands.Cog):
     async def on_message(self,message):
         if message.author.id == 302050872383242240:
             if '表示順をアップしたよ' in message.embeds[0].description:
-                await message.channel.send('bumpを確認したよ！')
+                await message.channel.send('わしはbumpを確認したぞ！')
                 for time in range(120,0,-1):
                     self.bump_time[message.guild.id] = time
                     asyncio.sleep(60)
-                                 
+                    if self.bump_time[message.guild.id] == 5:
+                        await message.channel.send('わしの腹時計があと5分！って言っとるぞ')
+                    if self.bump_time[message.guild.id] == 0:
+                        await message.channel.send('お腹がbumpを求めとる...')
+            elif 'このサーバーを上げられるようになるまで' in message.embeds[0].description:
+                await message.channel.send('わしの腹時計がまだbumpなんか入らないと言っておる')
+              
+                                
          
             
             
