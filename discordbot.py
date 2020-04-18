@@ -33,7 +33,7 @@ async def on_ready():
     cnvtime = time.strptime(login_t)
     login_time = time.strftime("%Y/%m/%d %H:%M", cnvtime)
     official = bot.get_guild(700603441302732873)
-    login_ch = official.get_cannel(700638466807169065)
+    login_ch = official.get_channel(700638466807169065)
     state_ch = official.get_channel(700613819939946546)
     login_embed = discord.Embed(title='Botが復帰しました!',description='LOGINED',colour=discord.Colour.green())
     login_embed.add_field(name='ステータス',value='login time'+str(login_time)+'succsess')
