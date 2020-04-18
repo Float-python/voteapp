@@ -27,7 +27,7 @@ class Bump(commands.Cog):
         self.bump_time[guild.id]=None
         join_bump_dict = discord.Embed(title='新サーバー辞書通知',description='bumpに関する辞書です',colour=discord.Colour.red())
         join_bump_dict.add_field(name='新サーバー',value=str(guild.name)+'\n'+str(guild.id))
-        join_bump_dict.add_field(name='value',value=str(bump_time[guild.id])
+        join_bump_dict.add_field(name='value',value=str(bump_time[guild.id]))
         await staff_state_ch.send(embed=join_bump_dict)
                                  
     @commands.Cog.listener()
