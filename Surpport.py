@@ -41,7 +41,7 @@ class Surpport(commands.Cog):
                 await ctx.send('無事にメッセージが届きました')
         else:
             msg_channel = int(ctx.channel.name)
-            ans_guild = self.bot.get_(msg_channel)
+            ans_guild = self.bot.get_guild(msg_channel)
             ans_ch = None
             for ch_check in ans_guild.channels:
                 if ch_check.name == 'あめみんhelp':
