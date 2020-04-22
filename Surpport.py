@@ -23,7 +23,7 @@ class Surpport(commands.Cog):
                 new_sp_em = discord.Embed(title=str(msg_guild.name),description=(ctx.author.name+'が作成しました'),colour=discord.Colour.red())
                 new_sp_em.add_field(name='お問い合わせID',value='`'+str(msg_guild.id)+'`')
                 await spt_ch.send(new_sp_em)
-                cnt_emb = dicord.Embed(title=str(ctx.author.name)+'さんからメッセージ',description=None,colour=discord.Colour.blue())
+                cnt_emb = discord.Embed(title=str(ctx.author.name)+'さんからメッセージ',description=None,colour=discord.Colour.blue())
                 cnt_emb.add_field(name='内容',value='```'+str(msg)+'```')
                 await spt_ch.send(embed=cnt_emb)
                 try:
