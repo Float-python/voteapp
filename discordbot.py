@@ -17,7 +17,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @bot.event
 async def on_command_error(ctx, error):
     official_server = bot.get_guild(700603441302732873)
-    error_ch = official_server.get_channnel(700638984425963560)
+    error_ch = official_server.get_channel(700638984425963560)
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
