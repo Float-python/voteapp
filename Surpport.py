@@ -3,7 +3,7 @@ from discord.ext import commands
 
 class Surpport(commands.Cog):
     
-    def __init__(self):
+    def __init__(self,bot):
         self.bot = bot
         
 
