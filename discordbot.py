@@ -7,6 +7,7 @@ from ActionCog import actioncommand
 from HelpCog import helpcommands
 from Admin import admin
 from bump import Bump
+from Surpport import Surpport
 import time
 bot = commands.Bot(command_prefix='*',help_command=None)
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -59,6 +60,7 @@ bot.add_cog(helpcommands)
 bot.add_cog(actioncommand(bot))
 bot.add_cog(admin(bot))
 bot.add_cog(Bump(bot))
+bot.add_cog(Surpport(bot))
 
 
 bot.run(token)
