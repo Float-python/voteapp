@@ -24,7 +24,7 @@ class Surpport(commands.Cog):
                 new_sp_em.add_field(name='お問い合わせID',value='`'+str(msg_guild.id)+'`')
                 await spt_ch.send(new_sp_em)
                 cnt_emb = dicord.Embed(title=str(ctx.author.name)+'さんからメッセージ',description=None,colour=discord.Colour.blue())
-                cnt_emb.add_field(name=内容,value='```'+str(msg)+'```')
+                cnt_emb.add_field(name='内容',value='```'+str(msg)+'```')
                 await spt_ch.send(embed=cnt_emb)
                 try:
                     a_ch = await msg_guild.create_text_channel(name='あめみんhelp')
@@ -36,7 +36,7 @@ class Surpport(commands.Cog):
                     await spt_ch.send('相手側でサポートチャンネルの作成に失敗してしまいました')
             else:
                 cnt_emb = discord.Embed(title=str(ctx.author.name)+'さんからメッセージ',description=None,colour=discord.Colour.blue())
-                cnt_emb.add_field(name=内容,value='```'+str(msg)+'```')
+                cnt_emb.add_field(name='内容',value='```'+str(msg)+'```')
                 await spt_ch.send(embed=cnt_emb)
                 await ctx.send('無事にメッセージが届きました')
         else:
