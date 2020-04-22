@@ -35,7 +35,7 @@ class Surpport(commands.Cog):
                     await ctx.send(embed=except_emb)
                     await spt_ch.send('相手側でサポートチャンネルの作成に失敗してしまいました')
             else:
-                cnt_emb = dicord.Embed(title=str(ctx.author.name)+'さんからメッセージ',description=None,colour=discord.Colour.blue())
+                cnt_emb = discord.Embed(title=str(ctx.author.name)+'さんからメッセージ',description=None,colour=discord.Colour.blue())
                 cnt_emb.add_field(name=内容,value='```'+str(msg)+'```')
                 await spt_ch.send(embed=cnt_emb)
                 await ctx.send('無事にメッセージが届きました')
