@@ -28,7 +28,7 @@ class Surpport(commands.Cog):
                 await spt_ch.send(embed=cnt_emb)
                 try:
                     a_ch = await msg_guild.create_text_channel(name='あめみんhelp')
-                    await a_ch.send()
+                    await a_ch.send("開発者がこのチャンネルで対応します")
                 except discord.errors.Forbidden:
                     except_emb = discord.Embed(title='エラーが発生したよ!!',description='チャンネルの作成に失敗しました',colour=discord.Colour.red())
                     except_emb.add_field(name='サポートチャンネルの作成に失敗しました',value='`権限設定`を確認してください。')
